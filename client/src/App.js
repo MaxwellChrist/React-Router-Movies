@@ -34,12 +34,14 @@ export default function App (props) {
   return (
     <div>
       <SavedList list={[ /* This is stretch */]} />
-        <Route path={"/movies/:movieID"}> 
-          <Movie />
-        </Route>
-        <Route path="/"> 
-          <MovieList something={movieList}/>
-        </Route>
+        <Switch>
+          <Route path={"/movies/:movieID"}> 
+            <Movie />
+          </Route>
+          <Route path="/"> 
+            <MovieList something={movieList}/>
+          </Route>
+        </Switch>
     </div>
   );
 }
